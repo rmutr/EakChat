@@ -4,13 +4,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--Toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarRegister"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <!--Content-->
     <LinearLayout
-        android:background="@drawable/login_masterung"
+        android:background="#c8ffffff"
         android:layout_margin="@dimen/margin"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <!--Name-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Icon-->
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Name-->
+            <EditText
+                android:inputType="textEmailAddress"
+                android:hint="name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <!--Email-->
         <LinearLayout
@@ -27,7 +57,6 @@
 
             <!--Email-->
             <EditText
-                android:id="@+id/edtEmail"
                 android:inputType="textEmailAddress"
                 android:hint="e-mail"
                 android:layout_width="match_parent"
@@ -48,9 +77,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <!--Email-->
+            <!--Password-->
             <EditText
-                android:id="@+id/edtPassword"
                 android:inputType="textPassword"
                 android:hint="password"
                 android:layout_width="match_parent"
@@ -58,27 +86,8 @@
 
         </LinearLayout>
 
-        <!--Login Button-->
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_marginTop="5dp"
-            android:text="Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <!--New Register Text-->
-        <TextView
-            android:clickable="true"
-            android:id="@+id/txtNewRegister"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/colorAccent"
-            android:textStyle="italic"
-            android:textSize="@dimen/h2"
-            android:layout_gravity="center_horizontal"
-            android:text="New Register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
     </LinearLayout>
+
 
 </LinearLayout>
