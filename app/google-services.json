@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "569423060642",
+    "firebase_url": "https://eakchat-b1fa6.firebaseio.com",
+    "project_id": "eakchat-b1fa6",
+    "storage_bucket": "eakchat-b1fa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569423060642:android:0d126764bf2f7ad9",
+        "android_client_info": {
+          "package_name": "eak.rmutr.ac.th.eakchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569423060642-n372t916mls1gp3u4lata3vnauocesj5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "eak.rmutr.ac.th.eakchat",
+            "certificate_hash": "6bf465581726c827925f8f006eeb0fcb0881f88f"
+          }
+        },
+        {
+          "client_id": "569423060642-0489tfcp496v5ad1gsp0acero9dsmvtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARPvdmagX_aviSgP-r5A3la5zw5Vr-le8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569423060642-0489tfcp496v5ad1gsp0acero9dsmvtf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
