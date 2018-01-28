@@ -106,7 +106,7 @@ public class RegisterFragment extends Fragment {
                             if (task.isSuccessful()) {
 
                                 Toast.makeText(getActivity(), "Register Success",
-                                        Toast.LENGTH_SHORT);
+                                        Toast.LENGTH_SHORT).show();
                                 getActivity().getSupportFragmentManager().popBackStack();
 
                             } else {
