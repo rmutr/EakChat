@@ -1,5 +1,6 @@
 package eak.rmutr.ac.th.eakchat.fragment;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -88,6 +89,11 @@ public class RegisterFragment extends Fragment {
 
     private void UploadValueToFirebase() {
 
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setTitle("Please wait Minus...");
+        progressDialog.setMessage("Try to save your value to Firebase");
+        progressDialog.show();
+
 //      Initial View
         EditText nameEditText = getView().findViewById(R.id.edtName);
         EditText emailEditText = getView().findViewById(R.id.edtEmail);
@@ -98,6 +104,9 @@ public class RegisterFragment extends Fragment {
         String passwordString = passwordEditText.getText().toString().trim();
 
         if (nameString.isEmpty() || emailString.isEmpty() || passwordString.isEmpty()) {
+
+            progressDialog.dismiss();
+
 //          Have Space
             MyAlert myAlert = new MyAlert(getActivity());
             myAlert.normalDialog("Have Space",
@@ -114,6 +123,8 @@ public class RegisterFragment extends Fragment {
 
                                 Toast.makeText(getActivity(), "Register Success",
                                         Toast.LENGTH_SHORT).show();
+
+                                progressDialog.dismiss();
 
                                 FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
                                 String userUIDstring = firebaseUser.getUid();
